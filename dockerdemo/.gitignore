@@ -1,5 +1,6 @@
 mvnw
 mvnw.cmd
+.gitattributes
 
 portfolio/src/main/java/
 HELP.md
