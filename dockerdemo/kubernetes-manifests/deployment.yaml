@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: k8s-docker-java
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: k8s-docker-java
