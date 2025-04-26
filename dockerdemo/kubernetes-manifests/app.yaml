@@ -1,18 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-docker-java-app
+  name: k8s-docker-java
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/Believekhandal/docker-k8s.git'  # <-- Change this
-    targetRevision: HEAD  # Branch like 'main' or 'master'
-    path: docker-k8s/dockerdemo/kubernetes-manifests # Or the folder where your deployment.yaml & service.yaml exist
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
+  source:
+    repoURL: 'https://github.com/Believekhandal/docker-k8s.git'
+    targetRevision: master
+    path: dockerdemo/kubernetes-manifests
+  project: default
   syncPolicy:
-    automated:
-      prune: true          # Delete resources if removed from Git
-      selfHeal: true       # Auto-fix drift between cluster and Git
+    automated: {}
