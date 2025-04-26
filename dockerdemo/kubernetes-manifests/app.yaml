@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/Believekhandal/docker-k8s.git'  # <-- Change this
     targetRevision: HEAD  # Branch like 'main' or 'master'
-    path: .               # Or the folder where your deployment.yaml & service.yaml exist
+    path: docker-k8s/dockerdemo/kubernetes-manifests # Or the folder where your deployment.yaml & service.yaml exist
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
